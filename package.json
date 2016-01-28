@@ -16,6 +16,7 @@
     "eslint-loader": "^1.2.1",
     "node-libs-browser": "^1.0.0",
     "strip-loader": "^0.1.1",
-    "webpack": "^1.12.12"
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
   }
 }
