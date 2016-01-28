@@ -1,15 +1,15 @@
 var path = require('path');
 
 module.exports = {
-  context: path.resolve('js'),
+  context: path.resolve('app/js'),
   entry: ['./utils', './app.js'],
   output: {
     path: path.resolve('build/js/'),
-    publicPath: '/public/assets/js/',
+    publicPath: '/app/assets/js/',
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: 'public'
+    contentBase: 'app'
   },
   devtool: 'source-map',
   module: {
@@ -25,6 +25,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+          test: /\.scss$/,
+          loaders: ["style", "css", "sass"]
       }
     ]
   },
